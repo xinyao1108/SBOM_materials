@@ -1,0 +1,67 @@
+<html>
+<head>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+    <style type="text/css">
+    mynetwork {
+        width: 800px;
+        height: 400px;
+        border: 1px solid lightgray;
+    }
+    </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<center>
+<h1>Dependency Graph</h1>
+</center>
+</head>
+<body>
+<div id = "mynetwork"></div>
+<script>
+    var edges;
+    var nodes;
+    var network;
+    var container;
+    var options, data;
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{'id': 0, 'label': 'ubuntu:/lib/x86_64-linux-gnu/libc.so.6'}, {'id': 1, 'label': 'ubuntu:/lib/x86_64-linux-gnu/libdl.so.2'}, {'id': 2, 'label': 'ubuntu:/lib/x86_64-linux-gnu/libnss_files.so.2'}, {'id': 3, 'label': 'ubuntu:/lib/x86_64-linux-gnu/libtinfo.so.6'}, {'id': 4, 'label': 'pip:accelerate', 'shape': 'square', 'color': 'red', 'borderWidth': 4}, {'id': 5, 'label': 'pip:certifi', 'color': 'red'}, {'id': 6, 'label': 'pip:charset-normalizer'}, {'id': 7, 'label': 'pip:filelock'}, {'id': 8, 'label': 'pip:fsspec'}, {'id': 9, 'label': 'ubuntu:gcc-10-base'}, {'id': 10, 'label': 'pip:huggingface-hub'}, {'id': 11, 'label': 'pip:idna', 'color': 'red'}, {'id': 12, 'label': 'pip:jinja2'}, {'id': 13, 'label': 'ubuntu:libc6'}, {'id': 14, 'label': 'ubuntu:libcrypt1'}, {'id': 15, 'label': 'ubuntu:libgcc-s1'}, {'id': 16, 'label': 'ubuntu:libtinfo6'}, {'id': 17, 'label': 'pip:markupsafe'}, {'id': 18, 'label': 'pip:mpmath', 'color': 'red'}, {'id': 19, 'label': 'pip:networkx'}, {'id': 20, 'label': 'pip:numpy'}, {'id': 21, 'label': 'pip:nvidia-cublas-cu12'}, {'id': 22, 'label': 'pip:nvidia-cuda-cupti-cu12'}, {'id': 23, 'label': 'pip:nvidia-cuda-nvrtc-cu12'}, {'id': 24, 'label': 'pip:nvidia-cuda-runtime-cu12'}, {'id': 25, 'label': 'pip:nvidia-cudnn-cu12'}, {'id': 26, 'label': 'pip:nvidia-cufft-cu12'}, {'id': 27, 'label': 'pip:nvidia-curand-cu12'}, {'id': 28, 'label': 'pip:nvidia-cusolver-cu12'}, {'id': 29, 'label': 'pip:nvidia-cusparse-cu12'}, {'id': 30, 'label': 'pip:nvidia-nccl-cu12'}, {'id': 31, 'label': 'pip:nvidia-nvjitlink-cu12'}, {'id': 32, 'label': 'pip:nvidia-nvtx-cu12'}, {'id': 33, 'label': 'pip:packaging'}, {'id': 34, 'label': 'pip:psutil', 'color': 'red'}, {'id': 35, 'label': 'pip:pyyaml'}, {'id': 36, 'label': 'pip:requests'}, {'id': 37, 'label': 'pip:safetensors'}, {'id': 38, 'label': 'pip:sympy'}, {'id': 39, 'label': 'pip:torch', 'color': 'red'}, {'id': 40, 'label': 'pip:tqdm'}, {'id': 41, 'label': 'pip:triton'}, {'id': 42, 'label': 'pip:typing-extensions'}, {'id': 43, 'label': 'pip:urllib3'}]);
+        edges = new vis.DataSet([{'from': 0, 'to': 13, 'shape': 'dot'}, {'from': 1, 'to': 13, 'shape': 'dot'}, {'from': 2, 'to': 13, 'shape': 'dot'}, {'from': 3, 'to': 16, 'shape': 'dot'}, {'from': 4, 'to': 39, 'shape': 'dot'}, {'from': 4, 'to': 33, 'shape': 'dot'}, {'from': 4, 'to': 2, 'shape': 'dot'}, {'from': 4, 'to': 10, 'shape': 'dot'}, {'from': 4, 'to': 20, 'shape': 'dot'}, {'from': 4, 'to': 0, 'shape': 'dot'}, {'from': 4, 'to': 37, 'shape': 'dot'}, {'from': 4, 'to': 35, 'shape': 'dot'}, {'from': 4, 'to': 1, 'shape': 'dot'}, {'from': 4, 'to': 3, 'shape': 'dot'}, {'from': 4, 'to': 34, 'shape': 'dot'}, {'from': 10, 'to': 35, 'shape': 'dot'}, {'from': 10, 'to': 7, 'shape': 'dot'}, {'from': 10, 'to': 2, 'shape': 'dot'}, {'from': 10, 'to': 0, 'shape': 'dot'}, {'from': 10, 'to': 8, 'shape': 'dot'}, {'from': 10, 'to': 40, 'shape': 'dot'}, {'from': 10, 'to': 1, 'shape': 'dot'}, {'from': 10, 'to': 3, 'shape': 'dot'}, {'from': 10, 'to': 36, 'shape': 'dot'}, {'from': 10, 'to': 42, 'shape': 'dot'}, {'from': 10, 'to': 33, 'shape': 'dot'}, {'from': 12, 'to': 17, 'shape': 'dot'}, {'from': 13, 'to': 14, 'shape': 'dot'}, {'from': 13, 'to': 15, 'shape': 'dot'}, {'from': 14, 'to': 13, 'shape': 'dot'}, {'from': 15, 'to': 13, 'shape': 'dot'}, {'from': 15, 'to': 9, 'shape': 'dot'}, {'from': 16, 'to': 13, 'shape': 'dot'}, {'from': 17, 'to': 1, 'shape': 'dot'}, {'from': 17, 'to': 3, 'shape': 'dot'}, {'from': 17, 'to': 0, 'shape': 'dot'}, {'from': 17, 'to': 2, 'shape': 'dot'}, {'from': 18, 'to': 1, 'shape': 'dot'}, {'from': 18, 'to': 3, 'shape': 'dot'}, {'from': 18, 'to': 0, 'shape': 'dot'}, {'from': 18, 'to': 2, 'shape': 'dot'}, {'from': 22, 'to': 1, 'shape': 'dot'}, {'from': 22, 'to': 3, 'shape': 'dot'}, {'from': 22, 'to': 0, 'shape': 'dot'}, {'from': 22, 'to': 2, 'shape': 'dot'}, {'from': 23, 'to': 1, 'shape': 'dot'}, {'from': 23, 'to': 3, 'shape': 'dot'}, {'from': 23, 'to': 0, 'shape': 'dot'}, {'from': 23, 'to': 2, 'shape': 'dot'}, {'from': 24, 'to': 1, 'shape': 'dot'}, {'from': 24, 'to': 3, 'shape': 'dot'}, {'from': 24, 'to': 0, 'shape': 'dot'}, {'from': 24, 'to': 2, 'shape': 'dot'}, {'from': 25, 'to': 21, 'shape': 'dot'}, {'from': 28, 'to': 29, 'shape': 'dot'}, {'from': 28, 'to': 21, 'shape': 'dot'}, {'from': 28, 'to': 31, 'shape': 'dot'}, {'from': 29, 'to': 31, 'shape': 'dot'}, {'from': 30, 'to': 1, 'shape': 'dot'}, {'from': 30, 'to': 3, 'shape': 'dot'}, {'from': 30, 'to': 0, 'shape': 'dot'}, {'from': 30, 'to': 2, 'shape': 'dot'}, {'from': 32, 'to': 1, 'shape': 'dot'}, {'from': 32, 'to': 3, 'shape': 'dot'}, {'from': 32, 'to': 0, 'shape': 'dot'}, {'from': 32, 'to': 2, 'shape': 'dot'}, {'from': 34, 'to': 1, 'shape': 'dot'}, {'from': 34, 'to': 3, 'shape': 'dot'}, {'from': 34, 'to': 0, 'shape': 'dot'}, {'from': 34, 'to': 2, 'shape': 'dot'}, {'from': 36, 'to': 6, 'shape': 'dot'}, {'from': 36, 'to': 43, 'shape': 'dot'}, {'from': 36, 'to': 2, 'shape': 'dot'}, {'from': 36, 'to': 5, 'shape': 'dot'}, {'from': 36, 'to': 0, 'shape': 'dot'}, {'from': 36, 'to': 1, 'shape': 'dot'}, {'from': 36, 'to': 3, 'shape': 'dot'}, {'from': 36, 'to': 11, 'shape': 'dot'}, {'from': 37, 'to': 1, 'shape': 'dot'}, {'from': 37, 'to': 3, 'shape': 'dot'}, {'from': 37, 'to': 0, 'shape': 'dot'}, {'from': 37, 'to': 2, 'shape': 'dot'}, {'from': 38, 'to': 18, 'shape': 'dot'}, {'from': 39, 'to': 12, 'shape': 'dot'}, {'from': 39, 'to': 28, 'shape': 'dot'}, {'from': 39, 'to': 29, 'shape': 'dot'}, {'from': 39, 'to': 2, 'shape': 'dot'}, {'from': 39, 'to': 1, 'shape': 'dot'}, {'from': 39, 'to': 32, 'shape': 'dot'}, {'from': 39, 'to': 26, 'shape': 'dot'}, {'from': 39, 'to': 7, 'shape': 'dot'}, {'from': 39, 'to': 8, 'shape': 'dot'}, {'from': 39, 'to': 38, 'shape': 'dot'}, {'from': 39, 'to': 24, 'shape': 'dot'}, {'from': 39, 'to': 41, 'shape': 'dot'}, {'from': 39, 'to': 0, 'shape': 'dot'}, {'from': 39, 'to': 27, 'shape': 'dot'}, {'from': 39, 'to': 21, 'shape': 'dot'}, {'from': 39, 'to': 22, 'shape': 'dot'}, {'from': 39, 'to': 30, 'shape': 'dot'}, {'from': 39, 'to': 3, 'shape': 'dot'}, {'from': 39, 'to': 42, 'shape': 'dot'}, {'from': 39, 'to': 23, 'shape': 'dot'}, {'from': 39, 'to': 19, 'shape': 'dot'}, {'from': 39, 'to': 25, 'shape': 'dot'}, {'from': 41, 'to': 1, 'shape': 'dot'}, {'from': 41, 'to': 3, 'shape': 'dot'}, {'from': 41, 'to': 7, 'shape': 'dot'}, {'from': 41, 'to': 2, 'shape': 'dot'}, {'from': 41, 'to': 0, 'shape': 'dot'}, {'from': 42, 'to': 1, 'shape': 'dot'}, {'from': 42, 'to': 3, 'shape': 'dot'}, {'from': 42, 'to': 0, 'shape': 'dot'}, {'from': 42, 'to': 2, 'shape': 'dot'}]);
+
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+
+        const options = {
+            manipulation: false,
+            height: "90%",
+            physics: {
+                hierarchicalRepulsion: {
+                nodeDistance: 300,
+                },
+            },
+            edges: {
+                color: {
+                    inherit: false
+                },
+                arrows: {
+                    to: true,
+                },
+            },
+            layout: {
+                improvedLayout: false
+            }
+        };
+
+
+
+        network = new vis.Network(container, data, options);
+
+        return network;
+    }
+
+    drawGraph();
+</script>
+</body>
+</html>

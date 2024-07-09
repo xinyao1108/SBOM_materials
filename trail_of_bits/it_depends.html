@@ -1,0 +1,67 @@
+<html>
+<head>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+    <style type="text/css">
+    mynetwork {
+        width: 800px;
+        height: 400px;
+        border: 1px solid lightgray;
+    }
+    </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<center>
+<h1>Dependency Graph</h1>
+</center>
+</head>
+<body>
+<div id = "mynetwork"></div>
+<script>
+    var edges;
+    var nodes;
+    var network;
+    var container;
+    var options, data;
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+
+        // parsing and collecting nodes and edges from the python
+       nodes = new vis.DataSet([{'id': 0, 'label': 'ubuntu:/lib/x86_64-linux-gnu/libc.so.6'}, {'id': 1, 'label': 'ubuntu:/lib/x86_64-linux-gnu/libdl.so.2'}, {'id': 2, 'label': 'ubuntu:/lib/x86_64-linux-gnu/libnss_files.so.2'}, {'id': 3, 'label': 'ubuntu:/lib/x86_64-linux-gnu/libtinfo.so.6'}, {'id': 4, 'label': 'pip:anytree'}, {'id': 5, 'label': 'pip:appdirs'}, {'id': 6, 'label': 'pip:cachetools'}, {'id': 7, 'label': 'pip:certifi', 'color': 'red'}, {'id': 8, 'label': 'pip:charset-normalizer'}, {'id': 9, 'label': 'pip:docker'}, {'id': 10, 'label': 'ubuntu:gcc-10-base'}, {'id': 11, 'label': 'pip:graphviz'}, {'id': 12, 'label': 'pip:greenlet'}, {'id': 13, 'label': 'pip:idna', 'color': 'red'}, {'id': 14, 'label': 'pip:it-depends', 'shape': 'square', 'color': 'red', 'borderWidth': 4}, {'id': 15, 'label': 'pip:johnnydep'}, {'id': 16, 'label': 'ubuntu:libc6'}, {'id': 17, 'label': 'ubuntu:libcrypt1'}, {'id': 18, 'label': 'ubuntu:libgcc-s1'}, {'id': 19, 'label': 'ubuntu:libtinfo6'}, {'id': 20, 'label': 'pip:networkx'}, {'id': 21, 'label': 'pip:oyaml'}, {'id': 22, 'label': 'pip:packaging'}, {'id': 23, 'label': 'pip:parse-cmake'}, {'id': 24, 'label': 'pip:pip', 'color': 'red'}, {'id': 25, 'label': 'pip:pypeg2'}, {'id': 26, 'label': 'pip:pyyaml'}, {'id': 27, 'label': 'pip:requests'}, {'id': 28, 'label': 'pip:semantic-version'}, {'id': 29, 'label': 'pip:six'}, {'id': 30, 'label': 'pip:sqlalchemy'}, {'id': 31, 'label': 'pip:structlog'}, {'id': 32, 'label': 'pip:tabulate'}, {'id': 33, 'label': 'pip:toml'}, {'id': 34, 'label': 'pip:tqdm'}, {'id': 35, 'label': 'pip:typing-extensions'}, {'id': 36, 'label': 'pip:urllib3'}, {'id': 37, 'label': 'pip:wheel', 'color': 'red'}, {'id': 38, 'label': 'pip:wimpy'}]);
+    edges = new vis.DataSet([{'from': 0, 'to': 16, 'shape': 'dot'}, {'from': 1, 'to': 16, 'shape': 'dot'}, {'from': 2, 'to': 16, 'shape': 'dot'}, {'from': 3, 'to': 19, 'shape': 'dot'}, {'from': 4, 'to': 3, 'shape': 'dot'}, {'from': 4, 'to': 1, 'shape': 'dot'}, {'from': 4, 'to': 29, 'shape': 'dot'}, {'from': 4, 'to': 0, 'shape': 'dot'}, {'from': 4, 'to': 2, 'shape': 'dot'}, {'from': 5, 'to': 0, 'shape': 'dot'}, {'from': 5, 'to': 3, 'shape': 'dot'}, {'from': 5, 'to': 2, 'shape': 'dot'}, {'from': 5, 'to': 1, 'shape': 'dot'}, {'from': 6, 'to': 0, 'shape': 'dot'}, {'from': 6, 'to': 3, 'shape': 'dot'}, {'from': 6, 'to': 2, 'shape': 'dot'}, {'from': 6, 'to': 1, 'shape': 'dot'}, {'from': 9, 'to': 3, 'shape': 'dot'}, {'from': 9, 'to': 36, 'shape': 'dot'}, {'from': 9, 'to': 1, 'shape': 'dot'}, {'from': 9, 'to': 27, 'shape': 'dot'}, {'from': 9, 'to': 22, 'shape': 'dot'}, {'from': 9, 'to': 2, 'shape': 'dot'}, {'from': 9, 'to': 0, 'shape': 'dot'}, {'from': 11, 'to': 0, 'shape': 'dot'}, {'from': 11, 'to': 3, 'shape': 'dot'}, {'from': 11, 'to': 2, 'shape': 'dot'}, {'from': 11, 'to': 1, 'shape': 'dot'}, {'from': 14, 'to': 28, 'shape': 'dot'}, {'from': 14, 'to': 20, 'shape': 'dot'}, {'from': 14, 'to': 3, 'shape': 'dot'}, {'from': 14, 'to': 34, 'shape': 'dot'}, {'from': 14, 'to': 23, 'shape': 'dot'}, {'from': 14, 'to': 15, 'shape': 'dot'}, {'from': 14, 'to': 27, 'shape': 'dot'}, {'from': 14, 'to': 0, 'shape': 'dot'}, {'from': 14, 'to': 11, 'shape': 'dot'}, {'from': 14, 'to': 1, 'shape': 'dot'}, {'from': 14, 'to': 30, 'shape': 'dot'}, {'from': 14, 'to': 9, 'shape': 'dot'}, {'from': 14, 'to': 36, 'shape': 'dot'}, {'from': 14, 'to': 2, 'shape': 'dot'}, {'from': 14, 'to': 5, 'shape': 'dot'}, {'from': 15, 'to': 38, 'shape': 'dot'}, {'from': 15, 'to': 3, 'shape': 'dot'}, {'from': 15, 'to': 21, 'shape': 'dot'}, {'from': 15, 'to': 33, 'shape': 'dot'}, {'from': 15, 'to': 37, 'shape': 'dot'}, {'from': 15, 'to': 4, 'shape': 'dot'}, {'from': 15, 'to': 2, 'shape': 'dot'}, {'from': 15, 'to': 6, 'shape': 'dot'}, {'from': 15, 'to': 1, 'shape': 'dot'}, {'from': 15, 'to': 31, 'shape': 'dot'}, {'from': 15, 'to': 22, 'shape': 'dot'}, {'from': 15, 'to': 0, 'shape': 'dot'}, {'from': 15, 'to': 32, 'shape': 'dot'}, {'from': 15, 'to': 24, 'shape': 'dot'}, {'from': 16, 'to': 18, 'shape': 'dot'}, {'from': 16, 'to': 17, 'shape': 'dot'}, {'from': 17, 'to': 16, 'shape': 'dot'}, {'from': 18, 'to': 10, 'shape': 'dot'}, {'from': 18, 'to': 16, 'shape': 'dot'}, {'from': 19, 'to': 16, 'shape': 'dot'}, {'from': 20, 'to': 0, 'shape': 'dot'}, {'from': 20, 'to': 3, 'shape': 'dot'}, {'from': 20, 'to': 2, 'shape': 'dot'}, {'from': 20, 'to': 1, 'shape': 'dot'}, {'from': 21, 'to': 3, 'shape': 'dot'}, {'from': 21, 'to': 1, 'shape': 'dot'}, {'from': 21, 'to': 0, 'shape': 'dot'}, {'from': 21, 'to': 26, 'shape': 'dot'}, {'from': 21, 'to': 2, 'shape': 'dot'}, {'from': 22, 'to': 0, 'shape': 'dot'}, {'from': 22, 'to': 3, 'shape': 'dot'}, {'from': 22, 'to': 2, 'shape': 'dot'}, {'from': 22, 'to': 1, 'shape': 'dot'}, {'from': 23, 'to': 3, 'shape': 'dot'}, {'from': 23, 'to': 25, 'shape': 'dot'}, {'from': 23, 'to': 1, 'shape': 'dot'}, {'from': 23, 'to': 0, 'shape': 'dot'}, {'from': 23, 'to': 2, 'shape': 'dot'}, {'from': 24, 'to': 0, 'shape': 'dot'}, {'from': 24, 'to': 3, 'shape': 'dot'}, {'from': 24, 'to': 2, 'shape': 'dot'}, {'from': 24, 'to': 1, 'shape': 'dot'}, {'from': 27, 'to': 3, 'shape': 'dot'}, {'from': 27, 'to': 36, 'shape': 'dot'}, {'from': 27, 'to': 1, 'shape': 'dot'}, {'from': 27, 'to': 7, 'shape': 'dot'}, {'from': 27, 'to': 13, 'shape': 'dot'}, {'from': 27, 'to': 8, 'shape': 'dot'}, {'from': 27, 'to': 0, 'shape': 'dot'}, {'from': 27, 'to': 2, 'shape': 'dot'}, {'from': 28, 'to': 0, 'shape': 'dot'}, {'from': 28, 'to': 3, 'shape': 'dot'}, {'from': 28, 'to': 2, 'shape': 'dot'}, {'from': 28, 'to': 1, 'shape': 'dot'}, {'from': 29, 'to': 0, 'shape': 'dot'}, {'from': 29, 'to': 3, 'shape': 'dot'}, {'from': 29, 'to': 2, 'shape': 'dot'}, {'from': 29, 'to': 1, 'shape': 'dot'}, {'from': 30, 'to': 3, 'shape': 'dot'}, {'from': 30, 'to': 1, 'shape': 'dot'}, {'from': 30, 'to': 0, 'shape': 'dot'}, {'from': 30, 'to': 35, 'shape': 'dot'}, {'from': 30, 'to': 2, 'shape': 'dot'}, {'from': 30, 'to': 12, 'shape': 'dot'}, {'from': 31, 'to': 0, 'shape': 'dot'}, {'from': 31, 'to': 3, 'shape': 'dot'}, {'from': 31, 'to': 2, 'shape': 'dot'}, {'from': 31, 'to': 1, 'shape': 'dot'}, {'from': 33, 'to': 0, 'shape': 'dot'}, {'from': 33, 'to': 3, 'shape': 'dot'}, {'from': 33, 'to': 2, 'shape': 'dot'}, {'from': 33, 'to': 1, 'shape': 'dot'}, {'from': 34, 'to': 0, 'shape': 'dot'}, {'from': 34, 'to': 3, 'shape': 'dot'}, {'from': 34, 'to': 2, 'shape': 'dot'}, {'from': 34, 'to': 1, 'shape': 'dot'}, {'from': 35, 'to': 0, 'shape': 'dot'}, {'from': 35, 'to': 3, 'shape': 'dot'}, {'from': 35, 'to': 2, 'shape': 'dot'}, {'from': 35, 'to': 1, 'shape': 'dot'}, {'from': 36, 'to': 0, 'shape': 'dot'}, {'from': 36, 'to': 3, 'shape': 'dot'}, {'from': 36, 'to': 2, 'shape': 'dot'}, {'from': 36, 'to': 1, 'shape': 'dot'}, {'from': 37, 'to': 0, 'shape': 'dot'}, {'from': 37, 'to': 3, 'shape': 'dot'}, {'from': 37, 'to': 2, 'shape': 'dot'}, {'from': 37, 'to': 1, 'shape': 'dot'}, {'from': 38, 'to': 0, 'shape': 'dot'}, {'from': 38, 'to': 3, 'shape': 'dot'}, {'from': 38, 'to': 2, 'shape': 'dot'}, {'from': 38, 'to': 1, 'shape': 'dot'}]);
+
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+
+        const options = {
+            manipulation: false,
+            height: "90%",
+            physics: {
+                hierarchicalRepulsion: {
+                nodeDistance: 300,
+                },
+            },
+            edges: {
+                color: {
+                    inherit: false
+                },
+                arrows: {
+                    to: true,
+                },
+            },
+            layout: {
+                improvedLayout: false
+            }
+        };
+
+
+
+        network = new vis.Network(container, data, options);
+
+        return network;
+    }
+
+    drawGraph();
+</script>
+</body>
+</html>
