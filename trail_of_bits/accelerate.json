@@ -1,0 +1,599 @@
+{
+    "pip:nvidia-cufft-cu12": {
+        "0.0.1+dev5": {
+            "dependencies": {},
+            "vulnerabilities": [],
+            "source": "pip"
+        }
+    },
+    "pip:charset-normalizer": {
+        "2.0.0": {
+            "dependencies": {},
+            "vulnerabilities": [],
+            "source": "pip"
+        }
+    },
+    "pip:nvidia-nvjitlink-cu12": {
+        "0.0.1+dev5": {
+            "dependencies": {},
+            "vulnerabilities": [],
+            "source": "pip"
+        }
+    },
+    "pip:mpmath": {
+        "0.19.0": {
+            "dependencies": {},
+            "vulnerabilities": [
+                "PYSEC-2021-427 (CVE-2021-29063, GHSA-f865-m6cq-j9vx)",
+                "GHSA-f865-m6cq-j9vx (CVE-2021-29063, PYSEC-2021-427)"
+            ],
+            "source": "pip"
+        }
+    },
+    "pip:nvidia-cuda-cupti-cu12": {
+        "12.1.105": {
+            "dependencies": {},
+            "vulnerabilities": [],
+            "source": "pip"
+        }
+    },
+    "ubuntu:/lib/x86_64-linux-gnu/libnss_files.so.2": {
+        "0.0.0": {
+            "dependencies": {
+                "ubuntu:libc6": "*"
+            },
+            "vulnerabilities": [],
+            "source": "ubuntu"
+        }
+    },
+    "pip:numpy": {
+        "1.19.4": {
+            "dependencies": {},
+            "vulnerabilities": [
+                "GHSA-fpfv-jqm9-f5jm (CVE-2021-34141, PYSEC-2021-855)",
+                "GHSA-6p56-wp2h-9hxr (CVE-2021-33430, PYSEC-2021-854)"
+            ],
+            "source": "pip"
+        },
+        "1.22.4": {
+            "dependencies": {},
+            "vulnerabilities": [],
+            "source": "pip"
+        },
+        "1.17.0": {
+            "dependencies": {},
+            "vulnerabilities": [
+                "PYSEC-2021-856 (CVE-2021-41495, GHSA-5545-2q6w-2gh6)",
+                "GHSA-f7c7-j99h-c22f (CVE-2021-41496, PYSEC-2021-857)",
+                "GHSA-6p56-wp2h-9hxr (CVE-2021-33430, PYSEC-2021-854)",
+                "GHSA-fpfv-jqm9-f5jm (CVE-2021-34141, PYSEC-2021-855)",
+                "PYSEC-2021-857 (CVE-2021-41496, GHSA-f7c7-j99h-c22f)",
+                "GHSA-5545-2q6w-2gh6 (CVE-2021-41495, PYSEC-2021-856)"
+            ],
+            "source": "pip"
+        }
+    },
+    "pip:typing-extensions": {
+        "3.6.2": {
+            "dependencies": {},
+            "vulnerabilities": [],
+            "source": "pip"
+        },
+        "4.6.0": {
+            "dependencies": {},
+            "vulnerabilities": [],
+            "source": "pip"
+        },
+        "4.8.0": {
+            "dependencies": {},
+            "vulnerabilities": [],
+            "source": "pip"
+        }
+    },
+    "ubuntu:libgcc-s1": {
+        "10.5.0": {
+            "dependencies": {
+                "ubuntu:libc6": ">=2.14",
+                "ubuntu:gcc-10-base": "=10.5.0"
+            },
+            "vulnerabilities": [],
+            "source": "ubuntu"
+        },
+        "10.0.0": {
+            "dependencies": {
+                "ubuntu:libc6": ">=2.14",
+                "ubuntu:gcc-10-base": "=10"
+            },
+            "vulnerabilities": [],
+            "source": "ubuntu"
+        }
+    },
+    "pip:markupsafe": {
+        "2.0.0": {
+            "dependencies": {},
+            "vulnerabilities": [],
+            "source": "pip"
+        }
+    },
+    "pip:networkx": {
+        "2.4.0": {
+            "dependencies": {},
+            "vulnerabilities": [],
+            "source": "pip"
+        },
+        "0.34.0": {
+            "dependencies": {},
+            "vulnerabilities": [],
+            "source": "pip"
+        }
+    },
+    "pip:nvidia-nvtx-cu12": {
+        "12.1.105": {
+            "dependencies": {},
+            "vulnerabilities": [],
+            "source": "pip"
+        }
+    },
+    "ubuntu:gcc-10-base": {
+        "10.5.0": {
+            "dependencies": {},
+            "vulnerabilities": [],
+            "source": "ubuntu"
+        },
+        "10.0.0": {
+            "dependencies": {},
+            "vulnerabilities": [],
+            "source": "ubuntu"
+        }
+    },
+    "ubuntu:/lib/x86_64-linux-gnu/libc.so.6": {
+        "0.0.0": {
+            "dependencies": {
+                "ubuntu:libc6": "*"
+            },
+            "vulnerabilities": [],
+            "source": "ubuntu"
+        }
+    },
+    "pip:nvidia-cuda-nvrtc-cu12": {
+        "12.1.105": {
+            "dependencies": {},
+            "vulnerabilities": [],
+            "source": "pip"
+        }
+    },
+    "pip:filelock": {
+        "0.2.0": {
+            "dependencies": {},
+            "vulnerabilities": [],
+            "source": "pip"
+        }
+    },
+    "pip:urllib3": {
+        "1.21.1": {
+            "dependencies": {},
+            "vulnerabilities": [
+                "PYSEC-2020-148 (CVE-2020-26137, GHSA-wqvq-5m8c-6g24)",
+                "PYSEC-2023-212 (CVE-2023-45803, GHSA-g4mx-q9vg-27p4)",
+                "PYSEC-2018-32 (CVE-2018-20060, GHSA-www2-v7xj-xrc6)",
+                "GHSA-v845-jxx5-vc9f (CVE-2023-43804, PYSEC-2023-192)",
+                "GHSA-www2-v7xj-xrc6 (CVE-2018-20060, PYSEC-2018-32)",
+                "GHSA-r64q-w8jr-g9qp (CVE-2019-11236, PYSEC-2019-132)",
+                "PYSEC-2019-133 (CVE-2019-11324, GHSA-mh33-7rrq-662w)",
+                "PYSEC-2023-207 (CVE-2018-25091, GHSA-gwvm-45gx-3cf8)",
+                "GHSA-gwvm-45gx-3cf8 (CVE-2018-25091, PYSEC-2023-207)",
+                "PYSEC-2023-192 (CVE-2023-43804, GHSA-v845-jxx5-vc9f)",
+                "GHSA-wqvq-5m8c-6g24 (CVE-2020-26137, PYSEC-2020-148)",
+                "GHSA-g4mx-q9vg-27p4 (CVE-2023-45803, PYSEC-2023-212)",
+                "PYSEC-2021-108 (CVE-2021-33503, GHSA-q2q7-5pp4-w6pg)",
+                "PYSEC-2019-132 (CVE-2019-11236, GHSA-r64q-w8jr-g9qp)",
+                "GHSA-mh33-7rrq-662w (CVE-2019-11324, PYSEC-2019-133)"
+            ],
+            "source": "pip"
+        },
+        "1.26.5": {
+            "dependencies": {},
+            "vulnerabilities": [
+                "PYSEC-2023-192 (CVE-2023-43804, GHSA-v845-jxx5-vc9f)",
+                "GHSA-g4mx-q9vg-27p4 (CVE-2023-45803, PYSEC-2023-212)",
+                "PYSEC-2023-212 (CVE-2023-45803, GHSA-g4mx-q9vg-27p4)",
+                "GHSA-v845-jxx5-vc9f (CVE-2023-43804, PYSEC-2023-192)"
+            ],
+            "source": "pip"
+        },
+        "1.26.0": {
+            "dependencies": {},
+            "vulnerabilities": [
+                "PYSEC-2023-212 (CVE-2023-45803, GHSA-g4mx-q9vg-27p4)",
+                "GHSA-v845-jxx5-vc9f (CVE-2023-43804, PYSEC-2023-192)",
+                "GHSA-5phf-pp7p-vc2r (CVE-2021-28363, PYSEC-2021-59)",
+                "PYSEC-2021-59 (CVE-2021-28363, GHSA-5phf-pp7p-vc2r)",
+                "GHSA-q2q7-5pp4-w6pg (CVE-2021-33503, PYSEC-2021-108)",
+                "PYSEC-2023-192 (CVE-2023-43804, GHSA-v845-jxx5-vc9f)",
+                "GHSA-g4mx-q9vg-27p4 (CVE-2023-45803, PYSEC-2023-212)",
+                "PYSEC-2021-108 (CVE-2021-33503, GHSA-q2q7-5pp4-w6pg)"
+            ],
+            "source": "pip"
+        }
+    },
+    "pip:accelerate": {
+        "0.28.0": {
+            "dependencies": {
+                "ubuntu:/lib/x86_64-linux-gnu/libnss_files.so.2": "*",
+                "pip:psutil": "*",
+                "pip:packaging": ">=20.0",
+                "pip:numpy": ">=1.17",
+                "ubuntu:/lib/x86_64-linux-gnu/libtinfo.so.6": "*",
+                "pip:pyyaml": "*",
+                "pip:huggingface-hub": "*",
+                "pip:safetensors": ">=0.3.1",
+                "ubuntu:/lib/x86_64-linux-gnu/libc.so.6": "*",
+                "ubuntu:/lib/x86_64-linux-gnu/libdl.so.2": "*",
+                "pip:torch": ">=1.10.0"
+            },
+            "vulnerabilities": [],
+            "source": "pip"
+        }
+    },
+    "ubuntu:/lib/x86_64-linux-gnu/libdl.so.2": {
+        "0.0.0": {
+            "dependencies": {
+                "ubuntu:libc6": "*"
+            },
+            "vulnerabilities": [],
+            "source": "ubuntu"
+        }
+    },
+    "pip:psutil": {
+        "0.1.1": {
+            "dependencies": {},
+            "vulnerabilities": [
+                "PYSEC-2019-41 (CVE-2019-18874, GHSA-qfc5-mcwq-26q8)",
+                "GHSA-qfc5-mcwq-26q8 (CVE-2019-18874, PYSEC-2019-41)"
+            ],
+            "source": "pip"
+        }
+    },
+    "pip:nvidia-nccl-cu12": {
+        "2.19.3": {
+            "dependencies": {},
+            "vulnerabilities": [],
+            "source": "pip"
+        }
+    },
+    "pip:tqdm": {
+        "4.42.1": {
+            "dependencies": {},
+            "vulnerabilities": [],
+            "source": "pip"
+        },
+        "4.48.0": {
+            "dependencies": {},
+            "vulnerabilities": [],
+            "source": "pip"
+        }
+    },
+    "ubuntu:libtinfo6": {
+        "6.2.0": {
+            "dependencies": {
+                "ubuntu:libc6": ">=2.16"
+            },
+            "vulnerabilities": [],
+            "source": "ubuntu"
+        }
+    },
+    "ubuntu:libc6": {
+        "2.31.0": {
+            "dependencies": {
+                "ubuntu:libcrypt1": "*",
+                "ubuntu:libgcc-s1": "*"
+            },
+            "vulnerabilities": [],
+            "source": "ubuntu"
+        }
+    },
+    "pip:nvidia-cudnn-cu12": {
+        "0.0.1+dev5": {
+            "dependencies": {
+                "pip:nvidia-cublas-cu12": "*"
+            },
+            "vulnerabilities": [],
+            "source": "pip"
+        }
+    },
+    "pip:fsspec": {
+        "2023.5.0": {
+            "dependencies": {},
+            "vulnerabilities": [],
+            "source": "pip"
+        },
+        "0.1.0": {
+            "dependencies": {},
+            "vulnerabilities": [],
+            "source": "pip"
+        }
+    },
+    "pip:huggingface-hub": {
+        "0.19.3": {
+            "dependencies": {
+                "pip:fsspec": ">=2023.5.0",
+                "pip:tqdm": ">=4.42.1",
+                "pip:filelock": "*",
+                "pip:packaging": ">=20.9",
+                "pip:requests": "*",
+                "pip:typing-extensions": "*",
+                "pip:pyyaml": ">=5.1"
+            },
+            "vulnerabilities": [],
+            "source": "pip"
+        },
+        "0.16.4": {
+            "dependencies": {
+                "pip:fsspec": ">=2023.5.0",
+                "pip:tqdm": ">=4.42.1",
+                "pip:filelock": "*",
+                "pip:packaging": ">=20.9",
+                "pip:requests": "*",
+                "pip:typing-extensions": "*",
+                "pip:pyyaml": ">=5.1"
+            },
+            "vulnerabilities": [],
+            "source": "pip"
+        },
+        "0.0.1": {
+            "dependencies": {
+                "pip:fsspec": ">=2023.5.0",
+                "pip:tqdm": ">=4.42.1",
+                "pip:filelock": "*",
+                "pip:packaging": ">=20.9",
+                "pip:requests": "*",
+                "pip:typing-extensions": "*",
+                "pip:pyyaml": ">=5.1"
+            },
+            "vulnerabilities": [],
+            "source": "pip"
+        }
+    },
+    "pip:pyyaml": {
+        "3.10.0": {
+            "dependencies": {},
+            "vulnerabilities": [
+                "PYSEC-2021-142 (CVE-2020-14343, GHSA-8q59-q68h-6hv4)",
+                "GHSA-6757-jp84-gxfx (CVE-2020-1747, PYSEC-2020-96)",
+                "GHSA-8q59-q68h-6hv4 (CVE-2020-14343, PYSEC-2021-142)",
+                "GHSA-rprw-h62v-c2w7 (CVE-2017-18342, PYSEC-2018-49)",
+                "PYSEC-2018-49 (CVE-2017-18342, GHSA-rprw-h62v-c2w7)"
+            ],
+            "source": "pip"
+        },
+        "5.1.0": {
+            "dependencies": {},
+            "vulnerabilities": [
+                "PYSEC-2020-176 (CVE-2019-20477, GHSA-3pqx-4fqf-j49f)",
+                "GHSA-3pqx-4fqf-j49f (CVE-2019-20477, PYSEC-2020-176)",
+                "PYSEC-2021-142 (CVE-2020-14343, GHSA-8q59-q68h-6hv4)",
+                "GHSA-6757-jp84-gxfx (CVE-2020-1747, PYSEC-2020-96)",
+                "GHSA-8q59-q68h-6hv4 (CVE-2020-14343, PYSEC-2021-142)",
+                "PYSEC-2020-96 (CVE-2020-1747, GHSA-6757-jp84-gxfx)"
+            ],
+            "source": "pip"
+        }
+    },
+    "pip:safetensors": {
+        "0.4.1": {
+            "dependencies": {},
+            "vulnerabilities": [],
+            "source": "pip"
+        },
+        "0.3.1": {
+            "dependencies": {},
+            "vulnerabilities": [],
+            "source": "pip"
+        }
+    },
+    "pip:torch": {
+        "1.11.0": {
+            "dependencies": {
+                "pip:jinja2": "*",
+                "pip:nvidia-cudnn-cu12": "*",
+                "pip:nvidia-nvtx-cu12": "==12.1.105",
+                "pip:nvidia-cufft-cu12": "*",
+                "pip:filelock": "*",
+                "pip:typing-extensions": ">=4.8.0",
+                "pip:nvidia-cublas-cu12": "*",
+                "pip:nvidia-cusolver-cu12": "*",
+                "pip:nvidia-cuda-runtime-cu12": "==12.1.105",
+                "pip:triton": "==2.2.0",
+                "pip:fsspec": "*",
+                "pip:networkx": "*",
+                "pip:nvidia-cusparse-cu12": "*",
+                "pip:nvidia-nccl-cu12": "==2.19.3",
+                "pip:nvidia-cuda-cupti-cu12": "==12.1.105",
+                "pip:nvidia-cuda-nvrtc-cu12": "==12.1.105",
+                "pip:sympy": "*",
+                "pip:nvidia-curand-cu12": "*"
+            },
+            "vulnerabilities": [
+                "GHSA-47fc-vmwq-366v (BIT-pytorch-2022-45907, CVE-2022-45907, PYSEC-2022-43015)",
+                "PYSEC-2022-43015 (BIT-pytorch-2022-45907, CVE-2022-45907, GHSA-47fc-vmwq-366v)"
+            ],
+            "source": "pip"
+        }
+    },
+    "ubuntu:libcrypt1": {
+        "4.4.10": {
+            "dependencies": {
+                "ubuntu:libc6": ">=2.25"
+            },
+            "vulnerabilities": [],
+            "source": "ubuntu"
+        }
+    },
+    "pip:nvidia-cublas-cu12": {
+        "0.0.1+dev5": {
+            "dependencies": {},
+            "vulnerabilities": [],
+            "source": "pip"
+        }
+    },
+    "pip:idna": {
+        "2.5.0": {
+            "dependencies": {},
+            "vulnerabilities": [
+                "GHSA-jjg7-2v4v-x38h (CVE-2024-3651)"
+            ],
+            "source": "pip"
+        }
+    },
+    "pip:sympy": {
+        "0.5.14": {
+            "dependencies": {
+                "pip:mpmath": ">=0.19"
+            },
+            "vulnerabilities": [],
+            "source": "pip"
+        }
+    },
+    "ubuntu:/lib/x86_64-linux-gnu/libtinfo.so.6": {
+        "0.0.0": {
+            "dependencies": {
+                "ubuntu:libtinfo6": "*"
+            },
+            "vulnerabilities": [],
+            "source": "ubuntu"
+        }
+    },
+    "pip:nvidia-cusparse-cu12": {
+        "0.0.1+dev5": {
+            "dependencies": {
+                "pip:nvidia-nvjitlink-cu12": "*"
+            },
+            "vulnerabilities": [],
+            "source": "pip"
+        }
+    },
+    "pip:jinja2": {
+        "2.0.0-rc1": {
+            "dependencies": {
+                "pip:markupsafe": ">=2.0"
+            },
+            "vulnerabilities": [],
+            "source": "pip"
+        }
+    },
+    "pip:nvidia-cuda-runtime-cu12": {
+        "12.1.105": {
+            "dependencies": {},
+            "vulnerabilities": [],
+            "source": "pip"
+        }
+    },
+    "pip:triton": {
+        "2.2.0": {
+            "dependencies": {
+                "pip:filelock": "*"
+            },
+            "vulnerabilities": [],
+            "source": "pip"
+        }
+    },
+    "pip:packaging": {
+        "20.0.0": {
+            "dependencies": {},
+            "vulnerabilities": [],
+            "source": "pip"
+        },
+        "20.9.0": {
+            "dependencies": {},
+            "vulnerabilities": [],
+            "source": "pip"
+        }
+    },
+    "pip:certifi": {
+        "2017.4.17": {
+            "dependencies": {},
+            "vulnerabilities": [
+                "PYSEC-2023-135 (CVE-2023-37920, GHSA-xqr8-7jwr-rhp7)",
+                "GHSA-xqr8-7jwr-rhp7 (CVE-2023-37920, PYSEC-2023-135)"
+            ],
+            "source": "pip"
+        }
+    },
+    "pip:nvidia-cusolver-cu12": {
+        "0.0.1+dev5": {
+            "dependencies": {
+                "pip:nvidia-nvjitlink-cu12": "*",
+                "pip:nvidia-cusparse-cu12": "*",
+                "pip:nvidia-cublas-cu12": "*"
+            },
+            "vulnerabilities": [],
+            "source": "pip"
+        }
+    },
+    "pip:nvidia-curand-cu12": {
+        "0.0.1+dev5": {
+            "dependencies": {},
+            "vulnerabilities": [],
+            "source": "pip"
+        }
+    },
+    "pip:requests": {
+        "2.31.0": {
+            "dependencies": {
+                "pip:charset-normalizer": "<4,>=2",
+                "ubuntu:/lib/x86_64-linux-gnu/libnss_files.so.2": "*",
+                "pip:idna": "<4,>=2.5",
+                "pip:urllib3": "<3,>=1.21.1",
+                "ubuntu:/lib/x86_64-linux-gnu/libtinfo.so.6": "*",
+                "ubuntu:/lib/x86_64-linux-gnu/libc.so.6": "*",
+                "ubuntu:/lib/x86_64-linux-gnu/libdl.so.2": "*",
+                "pip:certifi": ">=2017.4.17"
+            },
+            "vulnerabilities": [],
+            "source": "pip"
+        },
+        "0.2.0": {
+            "dependencies": {
+                "pip:charset-normalizer": "<4,>=2",
+                "pip:urllib3": "<3,>=1.21.1",
+                "pip:idna": "<4,>=2.5",
+                "pip:certifi": ">=2017.4.17"
+            },
+            "vulnerabilities": [
+                "GHSA-x84v-xcm2-53pg (CVE-2018-18074, PYSEC-2018-28)",
+                "PYSEC-2014-14 (CVE-2014-1830, GHSA-652x-xj99-gmcc)",
+                "PYSEC-2014-13 (CVE-2014-1829, GHSA-cfj3-7x9c-4p3h)",
+                "GHSA-652x-xj99-gmcc (CVE-2014-1830, PYSEC-2014-14)",
+                "PYSEC-2018-28 (CVE-2018-18074, GHSA-x84v-xcm2-53pg)",
+                "GHSA-cfj3-7x9c-4p3h (CVE-2014-1829, PYSEC-2014-13)"
+            ],
+            "source": "pip"
+        },
+        "2.20.0": {
+            "dependencies": {
+                "pip:charset-normalizer": "<4,>=2",
+                "pip:urllib3": "<3,>=1.21.1",
+                "pip:idna": "<4,>=2.5",
+                "pip:certifi": ">=2017.4.17"
+            },
+            "vulnerabilities": [
+                "GHSA-j8r2-6x86-q33q (CVE-2023-32681, PYSEC-2023-74)",
+                "PYSEC-2023-74 (CVE-2023-32681, GHSA-j8r2-6x86-q33q)"
+            ],
+            "source": "pip"
+        },
+        "2.26.0": {
+            "dependencies": {
+                "pip:charset-normalizer": "<4,>=2",
+                "pip:urllib3": "<3,>=1.21.1",
+                "pip:idna": "<4,>=2.5",
+                "pip:certifi": ">=2017.4.17"
+            },
+            "vulnerabilities": [
+                "GHSA-j8r2-6x86-q33q (CVE-2023-32681, PYSEC-2023-74)",
+                "PYSEC-2023-74 (CVE-2023-32681, GHSA-j8r2-6x86-q33q)"
+            ],
+            "source": "pip"
+        }
+    }
+}
